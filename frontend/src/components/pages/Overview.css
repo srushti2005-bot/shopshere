@@ -1,0 +1,150 @@
+.page {
+  padding: 32px 32px 48px;
+  max-width: 1400px;
+}
+
+.page-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.page-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: -0.5px;
+}
+
+.page-time {
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.charts-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.chart-card {
+  background: #1e2130;
+  border: 1px solid #2d3148;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.chart-card.wide { flex: 1.8; }
+.chart-card.narrow { flex: 1; min-width: 0; }
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.chart-header h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.chart-sub {
+  font-size: 0.72rem;
+  color: #475569;
+}
+
+.chart-tooltip {
+  background: #0c0e18;
+  border: 1px solid #2d3148;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  color: #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.tooltip-label {
+  color: #64748b;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+/* Order status legend */
+.status-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-label { flex: 1; color: #94a3b8; text-transform: capitalize; }
+.legend-pct { color: #64748b; font-family: 'Space Mono', monospace; font-size: 0.7rem; }
+
+/* Payment bars */
+.payment-list { display: flex; flex-direction: column; gap: 14px; padding-top: 4px; }
+
+.payment-row { display: flex; align-items: center; gap: 10px; }
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  flex-shrink: 0;
+}
+
+.payment-name { font-size: 0.72rem; font-weight: 700; color: #e2e8f0; font-family: 'Space Mono', monospace; }
+.payment-count { font-size: 0.65rem; color: #475569; }
+
+.payment-bar-wrap {
+  flex: 1;
+  height: 6px;
+  background: #0f1117;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.payment-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.payment-pct {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-family: 'Space Mono', monospace;
+  width: 36px;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .charts-row { flex-direction: column; }
+  .chart-card.wide, .chart-card.narrow { flex: none; }
+}

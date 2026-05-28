@@ -1,0 +1,65 @@
+.stat-card {
+  background: #1e2130;
+  border: 1px solid #2d3148;
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent, #a78bfa);
+  opacity: 0.7;
+}
+
+.stat-card:hover { border-color: #3d4060; }
+
+.stat-icon {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.stat-title {
+  font-size: 0.72rem;
+  color: #64748b;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  font-family: 'Space Mono', monospace;
+  line-height: 1.2;
+}
+
+.stat-sub {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* Skeleton */
+.stat-card.skeleton { cursor: default; }
+.sk-line {
+  background: linear-gradient(90deg, #1e2130 0%, #2d3148 50%, #1e2130 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.sk-line.short { height: 10px; width: 40%; }
+.sk-line.long { height: 28px; width: 70%; }
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
